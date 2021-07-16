@@ -1,11 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import Store from "./store";
-import C from "../utils/constants";
 import Student from "./student";
-import getAll from "./gets";
-import Logo from "../img/sofkau-logo-horizontal.png"
+import getAll from "./api";
+import Logo from "../utils/img/sofkau-logo-horizontal.png"
 
-const HOST_API = C.HOST_API;
+
 
 const StudentsList = () => {
   const {

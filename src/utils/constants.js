@@ -1,6 +1,5 @@
 const constants = {
-    //HOST_API: "https://sofkau-students.herokuapp.com",
-    HOST_API: "http://localhost:5000",
+    HOST_API: "https://sofkau-students.herokuapp.com",
   };
   
   export default constants;
