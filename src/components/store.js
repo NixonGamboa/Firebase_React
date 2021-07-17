@@ -3,6 +3,7 @@ import reducer from "./reducer";
 
 const initialState = {
   students: { list: [] },
+  ranking: {list: []}
 };
 const Store = createContext(initialState);
 

@@ -1,8 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import Store from "./store";
 import Student from "./student";
-import getAll from "./api";
-import Logo from "../utils/img/sofkau-logo-horizontal.png"
+import api from "./api";
 
 
 
@@ -15,7 +14,7 @@ const StudentsList = () => {
   const studentList = students.list;
 
   useEffect(() => {
-    getAll().then((students) => {
+    api.getAll().then((students) => {
       console.log(students);
       dispatch({ type: "update-students", students });
     });
@@ -23,22 +22,21 @@ const StudentsList = () => {
 
   return (
     <div className="container ">
-      <div>
-      <img src={Logo} alt="User Avatar" className="img-size-200"/>
-      </div>
-      <div style={{ backgroundColor: "#d36600", height:5 }}>
-      </div>
+     
+      {/* <div style={{ backgroundColor: "#d36600", height:5 }}>
+      </div> */}
 
       <h2 style={styles.title}>ESTUDIANTES SOFKAU...</h2>
       
       <table className="table table-striped">
         <thead>
           <tr>
-            <th scope="col">Nombres </th>
-            <th scope="col">Apellidos </th>
-            <th scope="col">Celular </th>
-            <th scope="col">Email </th>
-            <th scope="col">Especialidad </th>
+            <th scope="col">NOMBRES </th>
+            <th scope="col">APELLIDOS </th>
+            <th scope="col">CELULAR </th>
+            <th scope="col">EMAIL </th>
+            <th scope="col">ESPECIALIDAD </th>
+            <th scope="col">TU FAVORITO </th>
           </tr>
         </thead>
         <tbody>

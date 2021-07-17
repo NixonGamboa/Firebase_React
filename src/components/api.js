@@ -8,4 +8,14 @@ const getAll = async () => {
   console.log(res.data.data);
   return res.data.data;
 };
-export default getAll;
+const voteById = async (StudentId) => {
+  const res = await axios.patch(`${baseUrl}/api/sofkau/students/${StudentId}`);
+  return res.data.data;
+};
+
+const api = {
+  getAll,
+  voteById
+}
+
+export default api;
